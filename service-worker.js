@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "rafaelxiao.github.io/forex_watch/precache-manifest.51513d298edfe35859b6c60a575428f7.js"
+  "/forex_watch/precache-manifest.1ff0a8ebc2a073cc394b837ea32b73cc.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("rafaelxiao.github.io/forex_watch/index.html", {
+workbox.routing.registerNavigationRoute("/forex_watch/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
