@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "faee15fc676e81cdcbfe",
+    "revision": "50c94d2a4401c4063d2e",
     "url": "/forex_watch/static/css/main.4ce0fb2c.chunk.css"
   },
   {
-    "revision": "faee15fc676e81cdcbfe",
-    "url": "/forex_watch/static/js/main.faee15fc.chunk.js"
+    "revision": "50c94d2a4401c4063d2e",
+    "url": "/forex_watch/static/js/main.50c94d2a.chunk.js"
   },
   {
     "revision": "cd96fd5abde37a1876b3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/forex_watch/static/js/runtime~main.fd1f8dd5.js"
   },
   {
-    "revision": "04f20827235c89024d9cc24be0614696",
+    "revision": "272d5c9ba810d4f8e5e0043ddfa1bd5f",
     "url": "/forex_watch/index.html"
   }
 ];
