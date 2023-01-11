@@ -1,6 +1,7 @@
 {
   "name": "forex_reader",
   "version": "0.1.0",
+  "homepage": "rafaelxiao.github.io/forex_watch",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -40,5 +41,8 @@
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
