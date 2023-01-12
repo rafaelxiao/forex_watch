@@ -75,6 +75,12 @@ export default function ForexWatch() {
         )
     }
 
+    // const liborUrl = 'https://www.global-rates.com/en/interest-rates/libor/libor.aspx';
+    // const { data: liborData, status: liborStatus, loaded: liborLoaded } = useRequest(liborUrl, 'get', {});
+    // if (liborLoaded && liborStatus == 200) {
+    //     console.log(liborData)
+    // }
+
     // exchange rate
     const eastMoneyUrl = 'https://datacenter-web.eastmoney.com/api/data/v1/get';
     const { data: liborDataON, status: liborStatusON, loaded: liborLoadedON } = useRequest(eastMoneyUrl, 'get', {
@@ -94,7 +100,7 @@ export default function ForexWatch() {
             <div className="block">
                 <div className="block_title">{liborRecordsON[0]['CURRENCY_CODE']}</div>
                 <div className="block_main_text">{liborRecordsON[0]['IR_RATE']}</div>
-                <div className="block_date">{liborRecordsON[0]['REPORT_DATE'].slice(0,11)}</div>
+                {/* <div className="block_date">{liborRecordsON[0]['REPORT_DATE'].slice(0,11)}</div> */}
                 <div className="block_date">{liborRecordsON[0]['REPORT_PERIOD']}</div>
             </div>
         );
@@ -115,7 +121,7 @@ export default function ForexWatch() {
             <div className="block">
                 <div className="block_title">{liborRecords1M[0]['CURRENCY_CODE']}</div>
                 <div className="block_main_text">{liborRecords1M[0]['IR_RATE']}</div>
-                <div className="block_date">{liborRecords1M[0]['REPORT_DATE'].slice(0,11)}</div>
+                {/* <div className="block_date">{liborRecords1M[0]['REPORT_DATE'].slice(0,11)}</div> */}
                 <div className="block_date">{liborRecords1M[0]['REPORT_PERIOD']}</div>
             </div>
         );

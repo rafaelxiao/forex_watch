@@ -26,5 +26,10 @@ module.exports = function(app) {
             target: 'https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH',
             changeOrigin: true,
         }),
+
+        createProxyMiddleware('https://www.global-rates.com/en/interest-rates/libor/libor.aspx', {
+            target: 'https://www.global-rates.com/en/interest-rates/libor/libor.aspx',
+            changeOrigin: true,
+        }),
     )
 }
