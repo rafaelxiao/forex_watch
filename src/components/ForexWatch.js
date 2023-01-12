@@ -9,14 +9,27 @@ const tmp = 'https://datacenter-web.eastmoney.com/api/data/v1/get?callback=datat
 const tmp2 ='https://vip.stock.finance.sina.com.cn/forex/api/jsonp.php/var%20_fx_susdcnh_1_1673425502873=/NewForexService.getMinKline?symbol=fx_susdcnh&scale=1&datalen=1';
 
 
-export default function ForexReader() {
+export default function ForexWatch() {
     
     // hist
     const histUrl = 'https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?endDate=' + getToday() + '&currency=USD%2FCNY%2CHKD%2FCNY%2CAUD%2FCNY&pageNum=1&pageSize=10';
     const { data: histData, status: histStatus, loaded: histLoaded } = useRequest(histUrl, 'get', {});
+    
+    var histContent = (
+        <div>
+
+            <div className="current">
+                <div className="section_title">1、人民币汇率中间价(最新)载入中...</div>
+            </div>
+
+            <div className="hist">
+                <div className="section_title">2、人民币汇率中间价(历史)载入中...</div>
+            </div>
+        </div>
+    )
     if (histLoaded && histStatus == 200) {
         const histRecords = histData.records.slice(0, 7);
-        var histContent = (
+        histContent = (
             <div>
 
                 <div className="current">
@@ -108,8 +121,14 @@ export default function ForexReader() {
         );
     }
 
+    var liborContent = (
+        <div className="libor">
+            <div className="section_title">3、Libor报价载入中...</div>
+        </div>
+    )
+
     if (liborLoadedON && liborStatusON == 200 && liborLoaded1M && liborStatus1M == 200) {
-        var liborContent = (
+        liborContent = (
             <div className="libor">
                 <div className="section_title">Libor报价</div>
                 <div className="blocks">
@@ -125,9 +144,14 @@ export default function ForexReader() {
     // offshore
     const offUrl = 'https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH';
     const { data: offData, status: offStatus, loaded: offLoaded } = useRequest(offUrl, 'get');
+    var offContent = (
+        <div className="off">
+            <div className="section_title">4、离岸人民币香港载入中...</div>
+        </div>
+    );
     if (offLoaded && offStatus == 200) {
         var offRecords = offData.data;
-        var offContent = (
+        offContent = (
             <div className="off">
                 <div className="section_title">离岸人民币香港</div>
                 <div className="blocks">
@@ -135,22 +159,29 @@ export default function ForexReader() {
                         <div className="block_title">{offRecords['f57']}</div>
                         <div className="block_main_text">{offRecords['f43'] / 10000}</div>
                         <div className="block_date">{offRecords['f58']}</div>
-
                     </div>
-
                 </div>
-
             </div>
         );
     }
 
+    var loadingContent = <div className="section_title">提示：若长期未显示可尝试刷新。</div>
+    if (offLoaded && offStatus == 200 
+        && liborLoadedON && liborStatusON == 200 
+        && liborLoaded1M && liborStatus1M == 200 
+        && liborLoadedON && liborStatusON == 200
+    ) {
+        loadingContent = <div></div>
+    }
+
     return (
         <div className="forex_main">
-            <div className="forex_title">今日外汇信息</div>
+            <div className="forex_title">今日外汇信息汇总</div>
             <div className="forex_content">
                 { histContent }
                 { liborContent }
                 { offContent }
+                { loadingContent }
             </div>
         </div>
     )

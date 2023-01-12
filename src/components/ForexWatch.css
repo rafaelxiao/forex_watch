@@ -17,7 +17,9 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    text-indent: 12vw;
+    text-indent: calc(10vw + 10px);
+    padding: 0;
+    margin: 0;
     top: 0;
     left: 0;
     /* color: black; */
@@ -27,7 +29,7 @@
     margin-left: 10vw;
     padding-top: 20px;
     padding-bottom: 30px;
-    width: 95vw;
+    width: 85vw;
 }
 
 /* .current {
