@@ -1,13 +1,13 @@
 {
-  "main.css": "/forex_watch/static/css/main.4ce0fb2c.chunk.css",
-  "main.js": "/forex_watch/static/js/main.d0095e89.chunk.js",
-  "main.js.map": "/forex_watch/static/js/main.d0095e89.chunk.js.map",
-  "static/js/1.cd96fd5a.chunk.js": "/forex_watch/static/js/1.cd96fd5a.chunk.js",
-  "static/js/1.cd96fd5a.chunk.js.map": "/forex_watch/static/js/1.cd96fd5a.chunk.js.map",
+  "main.css": "/forex_watch/static/css/main.e4e867d9.chunk.css",
+  "main.js": "/forex_watch/static/js/main.a0c76379.chunk.js",
+  "main.js.map": "/forex_watch/static/js/main.a0c76379.chunk.js.map",
+  "static/js/1.e57f9e2d.chunk.js": "/forex_watch/static/js/1.e57f9e2d.chunk.js",
+  "static/js/1.e57f9e2d.chunk.js.map": "/forex_watch/static/js/1.e57f9e2d.chunk.js.map",
   "runtime~main.js": "/forex_watch/static/js/runtime~main.fd1f8dd5.js",
   "runtime~main.js.map": "/forex_watch/static/js/runtime~main.fd1f8dd5.js.map",
-  "static/css/main.4ce0fb2c.chunk.css.map": "/forex_watch/static/css/main.4ce0fb2c.chunk.css.map",
+  "static/css/main.e4e867d9.chunk.css.map": "/forex_watch/static/css/main.e4e867d9.chunk.css.map",
   "index.html": "/forex_watch/index.html",
-  "precache-manifest.0895f167c4d0348a156106b47f1a9642.js": "/forex_watch/precache-manifest.0895f167c4d0348a156106b47f1a9642.js",
+  "precache-manifest.7a170287d5a87ae03153a75275308f1b.js": "/forex_watch/precache-manifest.7a170287d5a87ae03153a75275308f1b.js",
   "service-worker.js": "/forex_watch/service-worker.js"
 }
