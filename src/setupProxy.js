@@ -22,8 +22,8 @@ module.exports = function(app) {
             changeOrigin: true,
         }),
 
-        createProxyMiddleware('http://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH', {
-            target: 'http://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH',
+        createProxyMiddleware('https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH', {
+            target: 'https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f43%2Cf57%2Cf58&secid=133.USDCNH',
             changeOrigin: true,
         }),
     )

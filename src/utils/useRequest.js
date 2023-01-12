@@ -9,7 +9,7 @@ export default function useRequest(url, method, params) {
 
     useEffect(() => {
         // initiate an async function to ensure getting the data
-        return async() => {
+        (async() => {
             try {
                 await axios.request(
                     {
@@ -28,7 +28,7 @@ export default function useRequest(url, method, params) {
             } finally {
                 setLoaded(true);
             }
-        }
+        })();
     }, []);
     return {data, status, error, loaded};
 }
