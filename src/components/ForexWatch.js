@@ -29,13 +29,13 @@ export default function ForexReader() {
                         </div>
 
                         <div className="block">
-                            <div className="block_title">USD/HKD</div>
+                            <div className="block_title">HKD/CNY</div>
                             <div className="block_main_text">{histRecords[0]['values'][1]}</div>
                             <div className="block_date">{histRecords[0]['date']}</div>
                         </div>
 
                         <div className="block">
-                            <div className="block_title">USD/AUD</div>
+                            <div className="block_title">AUD/CNY</div>
                             <div className="block_main_text">{histRecords[0]['values'][2]}</div>
                             <div className="block_date">{histRecords[0]['date']}</div>
                         </div>

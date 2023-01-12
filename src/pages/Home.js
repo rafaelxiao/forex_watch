@@ -6,7 +6,7 @@ import getToday from "../utils/getToday";
 function Home() {
 
     useEffect(() => {
-        document.title = getToday() + ' 外汇数据';
+        document.title = getToday() + ' 外汇数据汇总';
     }, [])
     
     return (
